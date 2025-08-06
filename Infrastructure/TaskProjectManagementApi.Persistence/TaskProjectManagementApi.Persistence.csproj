@@ -15,8 +15,4 @@
     <ProjectReference Include="..\..\Core\TaskProjectManagementApi.Domain\TaskProjectManagementApi.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-  </ItemGroup>
-
 </Project>
