@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\TaskProjectManagementApi.Application\TaskProjectManagementApi.Application.csproj" />
     <ProjectReference Include="..\..\Core\TaskProjectManagementApi.Domain\TaskProjectManagementApi.Domain.csproj" />
   </ItemGroup>
 
