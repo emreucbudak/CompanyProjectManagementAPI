@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskProjectManagementApi.Domain.Common
 {
-    public class BaseEntity
+    public class BaseEntity : IBaseEntity
     {
         public int Id { get; set; }
         public bool IsDeleted { get; set; }
