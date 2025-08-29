@@ -19,7 +19,7 @@ namespace TaskProjectManagementApi.Application.Interfaces
         );
 
         Task<IList<T>> GetAllAsyncWithPaging(Expression<Func<T, bool>>? predicate = null, Func<IQueryable<T>, Func<IQueryable<T>, IIncludableQueryable<T, object>>>? include = null, bool? trackChanges = null, Func<IQueryable<T>, IOrderedQueryable<T>>? ordered = null, int currentPage = 1, int pageSize = 5);
-        IQueryable<T> GetByExpression(bool trackChanges, Expression<Func<T, bool>>? expression = null);
+        IQueryable<T> GetByExpression(bool trackChanges, Expression<Func<T, bool>>? expression = null,Func<IQueryable<T>,IIncludableQueryable<T,object>>? inc = null);
 
     }
 }

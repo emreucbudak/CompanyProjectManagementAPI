@@ -24,7 +24,7 @@ namespace TaskProjectManagementApi.Application.Features.CQRS.Company.Command.Cre
             {
                 IsDeleted = false,
                 CompanyName = request.CompanyName,
-                Workers = request.Workers
+        
             };
             await _unitOfWork.GetWriteRepository<TaskProjectManagementApi.Domain.Entity.Company>().AddAsync(ds);
             await _unitOfWork.SaveAsync();

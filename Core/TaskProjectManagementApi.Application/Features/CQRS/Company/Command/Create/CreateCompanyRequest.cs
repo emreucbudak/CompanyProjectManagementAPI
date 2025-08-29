@@ -12,7 +12,7 @@ namespace TaskProjectManagementApi.Application.Features.CQRS.Company.Command.Cre
     public class CreateCompanyRequest : IRequest
     {
         public string CompanyName { get; set; }
-        public ICollection<Worker>? Workers { get; set; }
+
 
     }
 }

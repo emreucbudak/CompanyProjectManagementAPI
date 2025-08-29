@@ -9,8 +9,22 @@ namespace TaskProjectManagementApi.Domain.Entity
 {
     public class Team : BaseEntity
     {
+        public Team()
+        {
+        }
+
+        public Team(string teamName, ICollection<Worker> workers, int companyId)
+        {
+            TeamName = teamName;
+            Workers = workers;
+            CompanyId = companyId;
+        }
+
+        public string TeamName { get; set; }
         public ICollection<Worker> Workers { get; set; } 
-        public bool IsAvailable { get; set; }   
+ 
+        public int CompanyId { get; set; }
+        public Company Company { get; set; }
 
 
     }

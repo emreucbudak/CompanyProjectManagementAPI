@@ -16,12 +16,12 @@ namespace TaskProjectManagementApi.Domain.Entity
         public Company(string companyName, ICollection<Worker>? workers)
         {
             CompanyName = companyName;
-            Workers = workers;
+      
             IsDeleted = false;
         }
 
         public string CompanyName { get; set; }
-        public ICollection<Worker>? Workers { get; set; }    
+      
         
     }
 }

@@ -9,6 +9,18 @@ namespace TaskProjectManagementApi.Domain.Entity
 {
     public class TeamMissions : BaseEntity
     {
+        public TeamMissions()
+        {
+        }
+
+        public TeamMissions(string missionTitle, string missionDescription, int missionStatusId, int teamId)
+        {
+            MissionTitle = missionTitle;
+            MissionDescription = missionDescription;
+            MissionStatusId = missionStatusId;
+            TeamId = teamId;
+        }
+
         public string MissionTitle { get; set; }
         public string MissionDescription { get; set; }
         public int MissionStatusId { get; set; }

@@ -9,5 +9,6 @@ namespace TaskProjectManagementApi.Application.Features.CQRS.Company.Queries.Get
 {
     public class GetAllCompanyQueriesRequest : IRequest<IList<CompanyWithWorkersResponse>>
     {
+        public int CompanyId { get; set; }
     }
 }
