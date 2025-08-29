@@ -7,8 +7,9 @@ using TaskProjectManagementApi.Domain.Common;
 
 namespace TaskProjectManagementApi.Domain.Entity
 {
-    public class MissionStatus : BaseEntity
+    public class MissionStatus 
     {
+        public int Id { get; set; }
         public string StatusName { get; set; }
 
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using TaskProjectManagementApi.Application.Interfaces;
 using TaskProjectManagementApi.Domain.Common;
 using TaskProjectManagementApi.Persistence.AppDbContext;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace TaskProjectManagementApi.Persistence.Repositories
 {
@@ -55,9 +56,10 @@ namespace TaskProjectManagementApi.Persistence.Repositories
             return await query.Skip((currentPage - 1) * pageSize).Take(pageSize).ToListAsync();
         }
 
-        public IQueryable<T> GetByExpression(bool trackChanges, Expression<Func<T, bool>>? expression = null)
+        public IQueryable<T> GetByExpression(bool trackChanges, Expression<Func<T, bool>>? expression = null, Func<IQueryable<T>, IIncludableQueryable<T, object>>? inc = null)
         {
             if (!trackChanges) _dbSet.AsNoTracking();
+            if (inc is not null) inc(_dbSet);
             return _dbSet.Where(expression);
         }
     }

@@ -17,25 +17,25 @@ namespace TaskProjectManagementApi.Persistence.Configurations
             {
                 Id = 1,
                 StatusName = "Başlamadı",
-                IsDeleted = false,
+    
             },
             new MissionStatus()
             {
                 Id = 2,
                 StatusName = "Devam Ediyor",
-                IsDeleted = false,
+
             },
             new MissionStatus()
             {
                 Id = 3,
                 StatusName = "Tamamlandı",
-                IsDeleted = false,
+     
             },
             new MissionStatus()
             {
                 Id = 4,
                 StatusName = "İptal Edildi",
-                IsDeleted = false,
+            
             });
         }
     }
